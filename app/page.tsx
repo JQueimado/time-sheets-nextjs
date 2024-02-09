@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TimeSheet from "./TimeSheet";
 
 export default function Home() {
