@@ -1,4 +1,5 @@
 const data = {
+  id: "1",
   name: "Kartodromo de Evora",
   sheets: [
     { driver: "Obom", date: "12/03/2024", bestLap: "1.00.000" },
@@ -9,7 +10,10 @@ const data = {
 
 export default function KartingCenter() {
   return (
-    <div className="overflow-x justify-self-center max-w-fit rounded-md outline outline-2 outline-offset-1 outline-neutral bg-base-200">
+    <a
+      className="overflow-x justify-self-center max-w-fit rounded-md outline outline-2 outline-offset-1 outline-neutral bg-base-200 hover:bg-base-100"
+      href={`/kartingcenter/${data.id}`}
+    >
       <h3 className="text-center font-bold p-1">{data.name}</h3>
       <table className="table">
         <thead>
@@ -31,6 +35,6 @@ export default function KartingCenter() {
           ))}
         </tbody>
       </table>
-    </div>
+    </a>
   );
 }
